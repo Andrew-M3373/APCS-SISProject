@@ -16,7 +16,8 @@ public class Kaitlyn
 			//changeStudentinfo();
 			System.out.println("	(3) sort students");
 			//sortStudents();
-			
+			//hi
+			System.out.println("hi");
 			// Input checks
 			Scanner string1 = new Scanner(System.in);
 			return inputChecks(string1);
