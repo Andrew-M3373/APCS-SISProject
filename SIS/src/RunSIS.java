@@ -11,8 +11,8 @@ public class RunSIS {
 		
 		
 		Roster.fillRoster();
-		//checking for corrections and extra comments
-		//displaymenu
+		
+		//display main menu
 		boolean editing = true;
 		do {
 			switch (MainMenu.mainMenu()) {
@@ -33,7 +33,7 @@ public class RunSIS {
 				case 1: Roster.roster.sort(Comparator.comparing(Student::getLastName)); break;
 //					Collections.sort(Roster.roster, new LastNameComparator()); 
 				case 2: Roster.roster.sort(Comparator.comparing(Student::getGPA).reversed()); break;
-//					Collections.sort(Roster.roster, new GpaComparator()); break;
+//			Collections.sort(Roster.roster, new GpaComparator()); break;
 				case 3: 
 					switch (SortStudents.classSorterPrompt()) {
 					case 1: Roster.roster.sort(Comparator.comparing(Student::getFirstClass).thenComparing(Student::getLastName)); break;
@@ -68,5 +68,4 @@ public class RunSIS {
 		
 	}
 }
-
 
