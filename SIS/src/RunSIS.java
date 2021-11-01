@@ -11,7 +11,7 @@ public class RunSIS {
 		
 		
 		Roster.fillRoster();
-		
+		//checking for corrections and extra comments
 		//displaymenu
 		boolean editing = true;
 		do {
