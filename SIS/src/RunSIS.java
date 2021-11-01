@@ -12,7 +12,7 @@ public class RunSIS {
 		
 		Roster.fillRoster();
 		
-		//display main menuuuuu
+		//display main menu
 		boolean editing = true;
 		do {
 			switch (MainMenu.mainMenu()) {
