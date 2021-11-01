@@ -33,9 +33,17 @@ public class RunSIS {
 				switch (SortStudents.prompt()) {
 				case 1: Roster.roster.sort(Comparator.comparing(Student::getLastName)); break;
 //					Collections.sort(Roster.roster, new LastNameComparator()); 
-				case 2: Roster.roster.sort(Comparator.comparing(Student::getGPA).reversed()); break;
-//					Collections.sort(Roster.roster, new GpaComparator()); break;
+				case 2: Roster.roster.sort(Comparator.comparing(Student::getFirstName)); break;
 				case 3: 
+					switch (SortStudents.gradesSorterPrompt()) {
+					case 1: Roster.roster.sort(Comparator.comparing(Student::getFirstGrade).thenComparing(Student::getLastName)); break;
+					case 2: Roster.roster.sort(Comparator.comparing(Student::getSecondGrade).thenComparing(Student::getLastName)); break;
+					case 3: Roster.roster.sort(Comparator.comparing(Student::getThirdGrade).thenComparing(Student::getLastName)); break;
+					}
+					break;
+				case 4: Roster.roster.sort(Comparator.comparing(Student::getGPA).reversed()); break;
+//					Collections.sort(Roster.roster, new GpaComparator()); break;
+				case 5: 
 					switch (SortStudents.classSorterPrompt()) {
 					case 1: Roster.roster.sort(Comparator.comparing(Student::getFirstClass).thenComparing(Student::getLastName)); break;
 					case 2: Roster.roster.sort(Comparator.comparing(Student::getSecondClass).thenComparing(Student::getLastName)); break;
