@@ -43,6 +43,7 @@ public class RunSIS {
 					break; 
 				}
 				System.out.println("Do you want to print the roster? (y/n)");
+				//checking configurations
 				Scanner userInput = new Scanner(System.in);
 				boolean entering = true;
 				do {
