@@ -98,6 +98,8 @@ public class Roster
 						roster.remove(i);
 					}
 					fillRoster();
+					
+					System.out.println("\nRoster has been reset.");
 				}
 				
 
