@@ -35,11 +35,13 @@ public class RunSIS {
 //					Collections.sort(Roster.roster, new LastNameComparator()); 
 				case 2: Roster.roster.sort(Comparator.comparing(Student::getFirstName)); break;
 				case 3: 
+					SortStudents.sortGrades();
 					switch (SortStudents.gradesSorterPrompt()) {
-					case 1: Roster.roster.sort(Comparator.comparing(Student::getFirstGrade).thenComparing(Student::getLastName)); break;
-					case 2: Roster.roster.sort(Comparator.comparing(Student::getSecondGrade).thenComparing(Student::getLastName)); break;
-					case 3: Roster.roster.sort(Comparator.comparing(Student::getThirdGrade).thenComparing(Student::getLastName)); break;
+					case 1: Roster.roster.sort(Comparator.comparing(Student::getFirstClass).thenComparing(Student::getFirstGrade).thenComparing(Student::getLastName)); break;
+					case 2: Roster.roster.sort(Comparator.comparing(Student::getSecondClass).thenComparing(Student::getSecondGrade).thenComparing(Student::getLastName)); break;
+					case 3: Roster.roster.sort(Comparator.comparing(Student::getThirdClass).thenComparing(Student::getThirdGrade).thenComparing(Student::getLastName)); break;
 					}
+					SortStudents.sortGrades2();
 					break;
 				case 4: Roster.roster.sort(Comparator.comparing(Student::getGPA).reversed()); break;
 //					Collections.sort(Roster.roster, new GpaComparator()); break;
@@ -49,7 +51,7 @@ public class RunSIS {
 					case 2: Roster.roster.sort(Comparator.comparing(Student::getSecondClass).thenComparing(Student::getLastName)); break;
 					case 3: Roster.roster.sort(Comparator.comparing(Student::getThirdClass).thenComparing(Student::getLastName)); break;
 					}
-					break; 
+					break;
 				}
 				System.out.println("Do you want to print the roster? (y/n)");
 				Scanner userInput = new Scanner(System.in);
