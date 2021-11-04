@@ -102,6 +102,5 @@ public class Roster
 					System.out.println("\nRoster has been reset.");
 				}
 				
-// Fake pull request 3
 
 }
