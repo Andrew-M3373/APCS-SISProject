@@ -12,7 +12,7 @@ public class MainMenu
 					+ "\nNote: at any menu, enter the letter \"e\" to exit the program"
 					+ "\n\tWhat do you want to do?"
 					+ "\n\t(1) Add or delete a student"
-					+ "\n\t(2) Change students grades/schedule"
+					+ "\n\t(2) Change student grades/schedule"
 					+ "\n\t(3) Sort students"
 					+ "\n\t(4) Print roster"
 					+ "\n\t(5) Reset roster"
